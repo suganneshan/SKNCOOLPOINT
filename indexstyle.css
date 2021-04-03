@@ -1,0 +1,753 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap');
+html,body{
+  font-family: 'Rhodium Libre', serif;
+  overflow-x: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+/* navbar start */
+.navbar-logo
+{
+  padding-left:5px;
+}
+#navbarSupportedContent
+{
+  overflow: hidden;
+  position: relative;
+}
+#navbarSupportedContent ul
+{
+  padding:0px;
+  margin:0px;
+}
+#navbarSupportedContent li
+{
+  list-style-type: none;
+  float: left;
+  padding: 10px;
+}
+#navbarSupportedContent ul li a
+{
+  color:black;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 15px 15px;
+  transition-duration:0.5s;
+  position: relative;
+}
+#navbarSupportedContent > ul > li.active > a
+{
+color:white;
+background-color: transparent;
+transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after{
+  content: '\f105';
+  position: absolute;
+  right:20px;
+  top:10px;
+  font-size: 14px;
+  font-family:'Font Awesome 5 Free';
+  display:inline-block;
+  padding-right:3px;
+  vertical-align:middle;
+  font-weight: 900;
+  transition: 0.5s;
+}
+#navbarSupportedContent .active > a:not(:only-child):after
+{
+  transform: rotate(90deg);
+}
+.hori-selector{
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  top:0px;
+  left:0px;
+  transition-duration: 0.6s;
+  background: rgb(58,121,206);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 10px;
+}
+.hori-selector .right,
+.hori-selector .left{
+  position: absolute;
+  width:25px;
+  height:25px;
+  background: rgb(58,121,206);
+  bottom: 10px;
+}
+.hori-selector .right{
+  right: -25px;
+}
+.hori-selector .left{
+  left: -25px;
+}
+.hori-selector .right:before,
+.hori-selector .left:before {
+  content:'';
+  position: absolute;
+  width: 50px;
+  height:50px;
+  border-radius:50%;
+  background:#E0E1E2;
+}
+.hori-selector .right:before {
+  bottom:0;
+  right:-25px;
+}
+.hori-selector .left:before {
+  bottom:0;
+  left:-25px;
+}
+@media (max-width: 991px){
+  #navbarSupportedContent ul li a {
+      padding: 12px 30px;
+  }
+  .hori-selector{
+      margin-top: 0px;
+      margin-left: 10px;
+      border-radius: 0;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+  }
+  .hori-selector .left,
+  .hori-selector .right {
+    right: 10px;
+  }
+  .hori-selector .left {
+      top:-25px;
+      left:auto;
+  }
+  .hori-selector .right{
+      bottom:-25px;
+  }
+  .hori-selector .left:before 
+   {
+      left:-25px;
+      top:-25px;
+  }
+  .hori-selector .right:before
+  {
+    bottom:-25px;
+    left:-25px;
+  }
+
+} 
+/* navbar End */
+/*slick slider*/
+header{
+  position: relative;
+      height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+}
+.text_box .container{
+  width: 50%;
+  background: rgba(0,0,0,0.5);
+  padding: 17px;
+  margin-top:250px;
+  color:white;
+  line-height:2;
+  letter-spacing:1px;
+  text-indent:1%;
+  border-radius: 10px;
+}
+.swiper-slide .btn{
+  width: 150px;
+  height: 70px;
+  color:#44e014;
+  background:rgba(0,0,0,0.5);
+  font-size: 20px;
+  font-weight: 600;
+  padding:5px;
+  border: 2px solid rgb(120, 201, 226);
+  border-end-end-radius:10px;
+  border-bottom-left-radius:10px;
+  border-top-right-radius: 10px;
+}
+.swiper-slide .btn:hover{
+  background: #121313;
+  color:#44e014;
+  transform:translateX(3);
+  transition: ease-in .2s; 
+}
+
+@media only screen and (max-width:991px) {
+  .text_box .container {
+       font-size: 30px;
+       width:50%;
+
+    }   
+}
+
+@media only screen and (max-width:767px) {
+  .text_box .container {
+    font-size:20px;
+    width:50%;
+
+ }   
+}
+
+@media only screen and (max-width:575px) {
+  .swiper-container{
+    width: 100%;
+    height: 400px;
+  }
+  .swiper-slide{
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+  }
+  .text_box .container {
+    margin-top: 200px;
+    font-size: 10px;
+    width:100%;
+
+ } 
+ .swiper-slide .btn{
+   width: 150px;
+   height:50px;
+ }  
+}
+/*slick slider End*/
+
+p{
+  font-size:0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color:#363434;
+}
+.extra-div h2 ,.servicediv h2{
+  font-size: 0.9rem;
+  margin:20px 15px ;
+  line-height:1.1;
+  font-weight: bold;
+  word-spacing:4px;
+}
+.img_hover{
+  box-shadow:-10px -10px 40px rgba(255, 253, 253, 0.952);
+}
+.img_hover:hover{
+  transform:scale(1.2);
+  transition:ease-in-out 1.5s;
+  transition-delay:ease-in-out .5s;
+  z-index:2;
+}
+.btn-grad {background-image: linear-gradient(to right, #1c92d2 0%, #f19b4b   51%, #1c92d2  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   font-weight: 900;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px rgb(2, 2, 2);
+   border-radius: 10px;
+   display: inline-block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+ /*our service*/
+ #types_area{
+   margin-bottom: 50px;
+ }
+.section-header h2{
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+}
+.section-header p{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+}
+.section-header{
+  margin: 3% 0;
+}
+.service-type{
+  border-radius: 20px;
+  margin-top: 20px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #000;
+}
+.type-img{
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+.type-img img{
+  width: 100%;
+  transition:.4s;
+}
+.service-type:hover .type-img img{
+  transform: scale(1.1);
+}
+.type-content{
+  height:80px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  bottom: 0;
+  transition:all .4s;
+  background-image:linear-gradient(rgba(53, 179, 241, 0.973),rgba(0, 170, 255, 0.884));
+  z-index: 5;
+}
+.service-type:hover .type-content{
+  height: 240px;
+}
+.type-info{
+  padding: 5px 20px 5px 20px;
+  transition: all .5s;
+}
+.service-type:hover .type-content{
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0,0.7),rgb(0, 0, 0));
+}
+.service-type .type-content .type-info h3{
+  text-transform: uppercase;
+  color:white;
+  font-size: 20px;
+  margin: 10px;
+}
+.service-type:hover .type-info h3{
+  color: #fff;
+}
+.service-type:hover .type-info p{
+  color: #fff;
+}
+.type-text p{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  padding: 0 10px 5px;
+}
+/*End of Extradiv*/
+
+/* serviceoffers1*/
+.gap100{
+  padding: 70px 0px;
+}
+/*serviceoffers1 END*/
+.ourservice{
+  background-image:linear-gradient(rgba(0, 0, 0,0.1),rgb(0, 0, 0)),url('images/Air-Conditioner-repair.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-size:100% 100%;
+}
+
+.ourservice h1{
+  font-size:50px;
+  font-weight: 900;
+  color: whitesmoke;
+  word-spacing:2px;
+}
+.ourservice{
+  color:white;
+}
+.ourservice p{
+  font-size: 18px;
+  font-weight: 400;
+  padding: 4px;
+  line-height: 1;
+  text-align:justify;
+  color:white;
+}
+#more{
+  display: none;
+}
+
+/* serviceofferrs*/
+.serviceoffers{
+  margin-top: 20px;
+  padding: 50px;
+  background: rgb(0,199,249);
+background: radial-gradient(circle, rgba(0,199,249,1) 0%, rgba(152,233,254,1) 0%, rgba(255,255,255,1) 100%);
+  margin-bottom: 50px;
+}
+/*pricing*/
+.title-product{
+  font-size:60px;
+  padding-top: 10px;
+  font-weight: 700;
+  color:white;
+  text-align: center;
+}
+.product{
+  background-image:linear-gradient(rgba(8, 8, 8, 0.3),rgba(0,168,255,0.3)),url('images/Air-Conditioner-repair.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-size:100% 100%;
+}
+.product .card{
+  border:1px solid rgb(62, 207, 243);
+  background-color:rgba(39, 180, 199, 0);
+  border-radius: 20px;
+  padding: 20px;
+}
+.product-1 h5{
+  font-size: 20px;
+  font-weight: 600;
+  color:white;
+  margin-top: 5px;
+}
+.cost span{
+  font-size: 50px;
+  color:white;
+  font-weight: 900;
+}
+.product .card:hover{
+  transform: translateY(-15px);
+  transition: .3s;
+}
+.text1{
+  font-size: 15px;
+  font-weight:500;
+  color: #ffffff;
+}
+.fa-inr{
+  font-size: 40px;
+  color:white;
+}
+.product .fa-star{
+  font-size: 20px;
+  color:white;
+}
+/*pricing END*/
+
+/*projects*/
+.headings{
+  margin-bottom: 50px;
+}
+.headings h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform:uppercase;
+}
+.names h1{
+  color:#2e2e2e;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.service-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress{
+  height: 0.6rem !important;
+  margin-bottom: 25px !important;
+}
+i{
+  color:#2fccd0;
+}
+.project-work{
+  background: rgb(0,199,249);
+background: radial-gradient(circle, rgba(0,199,249,1) 0%, rgba(152,233,254,1) 0%, rgba(255,255,255,1) 100%);
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+.project-work h1{
+  font-size: 2rem;
+  text-align: center;
+}
+/*Projects END*/
+
+/*happyclients*/
+.testimonials-section{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.testimonials .card{
+  background: #fff;
+  box-shadow: 0 8px 30px -7px #c9dff0;
+  margin: 0 20px;
+  border-radius: 20px;
+  border: 0;
+}
+.testimonials .card .card-img-top{
+  max-width:100px;
+  border-radius:50%;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4px #9fabbb;
+  width: 100px;
+  height: 100px;
+}
+.testimonials .card h5{
+  color:#01b0f8;
+  font-size: 22px;
+  line-height:1.3rem;
+  font-weight: 600;
+}
+.testimonials .card h5 span{
+  font-size:17px;
+  color:#666666; 
+}
+.testimonials .card p{
+  font-size: 18px;
+  color:#555;
+  padding-bottom:15px;
+}
+.owl-item>div{
+  cursor: pointer;
+  margin: 5% 0%;
+  transition: margin 0.4s ease;
+}
+.owl-item.center > div 
+{
+cursor: pointer;
+margin: 0;
+}
+.testimonials .active{
+  opacity: 0.5;
+  transition: all 0.25s ease;
+}
+.testimonials .center{
+  opacity: 1;
+}
+.testimonials .owl-stage-outer{
+  padding: 30px 0;
+}
+.testimonials .owl-dots{
+  text-align: center;
+}
+.testimonials .owl-dots span{
+  position: relative;
+  height: 14px;
+  width: 14px;
+  border-radius: 20px;
+  display:block;
+  background: #fff;
+  border: 2px solid #01b0f8;
+  transition: all 0.25s ease;
+  margin:0 4px;
+}
+.testimonials .owl-dots .active span{
+  background: #01b0f8;
+  box-shadow: none;
+  height: 14px;
+  width: 30px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.testimonials .owl-dots .active{
+  box-shadow: none;
+}
+.owl-dots .owl-dot:focus{
+  box-shadow: none !important;
+}
+/*happyclients  END*/
+
+/*Customer Callback*/
+.bg{
+  padding: 80px 0px;  
+ background-image:linear-gradient(rgba(0,168,255,0.3),rgba(0,168,255,0.3)),url('images/Air-Conditioner-repair.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-size:100% 100%;
+}
+.form-wrap{
+  position: relative;
+  box-shadow: rgba(221,230,237,0.4) 0px 3px 10px 0px;
+  background-color: white;
+}
+#regForm{
+  padding:50px 30px 30px 30px;
+}
+.form-heading{
+  position:relative;
+  width: 110%;
+  left: -5%;
+  top:15px;
+  padding: 15px 0px;
+  color:white;
+  background-color:#68a8f1;
+  background:linear-gradient(to right,#68a8f1,#68a8f1);
+}
+.form-heading:before{
+  position: absolute;
+  content:'';
+  left:0;
+  bottom:-20px;
+  width: 18px;
+  height: 20px;
+  background-color: #68a8f1;
+  clip-path: polygon(0 0,100% 0,100% 100%);
+}
+.form-heading:after{
+  position: absolute;
+  content:'';
+  right:0;
+  bottom:-20px;
+  width: 18px;
+  height: 20px;
+  background-color: #68a8f1;
+  clip-path: polygon(0 0,0 100%,100% 0);
+}
+.form-heading h1{
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left:0px;
+}
+.form-heading p{
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight:500;
+  padding: 0px;
+  margin-left:0px;
+}
+#regForm label{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+.form-control{
+  border: none;
+  padding: 0px;
+  border-bottom: 2px solid #b5b5b5;
+  border-radius: 0px;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.was-validated:focus{
+  box-shadow: none;
+}
+::-webkit-input-placeholder{
+  text-transform: capitalize;
+  font-size: 11px;
+  font-weight: 500;
+  color:#5b5b5b;
+}
+.btn-primary{
+  background-color:#68a8f1;
+  border:none;
+  margin: 20px 0px 0px 0px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(to right,#68a8f1,#68a8f1);
+}
+#p1,#p2,#p3{
+  color:#ff0000;
+  font-size: 14px;
+  font-weight: 700;
+}
+/*Customer Callback*/
+#footer .container-fluid{
+  background-image:linear-gradient(to right,#0099ff,#0099ff);
+  color:#fff;
+}
+#footer-img{
+  width:100%;
+  height: 50%;
+}
+.footer-box{
+  padding: 20px;
+}
+.footer-box h6{
+  font-size: 20px;
+  font-weight: 900;
+  color:white;
+}
+.footer-box p{
+  font-size: 18px;
+  font-weight: 900;
+  color:white;
+}
+.footer-box .fa{
+  font-size:40px;
+  padding: 5px;
+  color:white;
+}
+.footer-box li{
+  list-style-type: none;
+  font-size: 25px;
+  font-weight: 600;
+}
+.footer-box a{
+  text-decoration: none;
+  color:white;
+}
+/*caorusel*/
+
+/*carosule end*/
+/*section*/
+
+/* preloader*/
+/* #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid steelblue;
+  border-top-color: steelblue;
+  border-bottom-color:#075820;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
