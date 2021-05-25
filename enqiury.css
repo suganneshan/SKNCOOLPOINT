@@ -1,0 +1,215 @@
+
+/* modal */
+.form_fild .input_group{
+    position: relative;
+    margin-bottom: 25px;
+    padding:0 15px;  
+    }
+    .form_fild .w_50{
+      width: 50%;
+      background: var(--color);
+    }
+    .form_fild .w_100{
+      width:100%;
+      background: var(--color);
+    }
+    .form_fild .input_group .input{
+      width:100%;
+      min-height: 30px;
+      padding: 5px 0;
+      border:none;
+      font-size: 18px;
+      background: var(--color);
+      color: rgb(0, 20, 29);
+      outline: none;
+      font-weight: 600;
+      border-bottom: 2px solid rgb(56, 56, 56);
+    }
+    .form_fild .input_group .input_textarea{
+      width: 100%;
+      height: 75px;
+    }
+    ::selection{
+      background-color: white;
+    color:#2873b4;
+    }
+    ::-moz-selection{
+      background-color: white;
+    color:#2873b4;
+    }
+    .form_fild .input_group input:focus{
+      border-bottom-color:#aaa;
+    }
+    .input_group .placeholder{
+      position: absolute;
+      left:15px;
+      top:0px;
+      bottom:0;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color:black;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .input_group .textarea{
+      align-items: baseline;
+    }
+    .input_group .input:valid~.placeholder,
+    .input_group .input:focus~.placeholder{
+      top:-45px;
+      font-size: 18px !important;
+      color:white;
+    }
+    .input_group .input:valid~.placeholder.textarea,
+    .input_group .input:focus~.placeholder.textarea{
+      top:-18px;
+    }
+    .input_group .btn{
+      padding: 12px;
+      border: none;
+      font-size: 20px;
+      font-weight: 500;
+      background: white;
+      color:var(--color);
+      border: 3px solid white;
+      min-width: 120px;
+      outline: none;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+    .input_group .btn:hover{
+      background:var(--color);;
+      color: black;
+    }
+    .modaled .form_fild{
+    padding: 2rem 0rem;
+    }
+    @media (min-width: 576px) {
+    .modaled .modal-dialog {
+      max-width: 400px;
+    }
+    .modaled.modal-dialog .modal-content {
+      padding: 1rem;
+    }
+    }
+    .modaled .modal-header .close {
+    margin-top: -1.5rem;
+    }
+    
+    .modaled .form-title {
+    margin: -2rem 0rem 2rem;
+    }
+    
+    .modaled .btn-round {
+    border-radius: 3rem;
+    }
+    
+    .modaled .delimiter {
+    padding: 1rem;
+    }
+    
+    .modaled .modal-content{
+    background:#689dcf;
+    } 
+    
+    @media(max-width:1024px){
+      header img{
+          width: 100%;
+          height: 100%;
+      }
+      .map {
+          padding-top: 12px;
+      }
+      .contact_wrapper{
+          width: 99%;
+          margin-top: 10px;
+      }
+      .contact_wrapper .contact_info{
+          width: 100%;
+          margin: 2px;
+      }
+      .contact_wrapper .contact_msg{
+          width: 100%;
+      }
+    }
+    @media(max-width:768px){
+      header img{
+          width: 100%;
+          height: 100%;
+      }
+      body{
+          align-items: baseline;
+      }
+      .contact_wrapper .contact_info{
+          width: 100%;
+          margin-left: 0;
+      }
+      .contact_wrapper{
+          width: 100%;
+          margin-top: 24px;
+          flex-direction: row-reverse;
+      }
+      .form_fild .w_50{
+          width: 100%;
+      }
+      .cont-footer {
+          margin-top: 0px;
+      }
+    } 
+    @media(max-width:375px){
+      header img{
+          width: 100%;
+          height: 249px;
+      }
+      body{
+          align-items: baseline;
+      }
+      .contact_wrapper .contact_info{
+          width: 100%;
+          margin-left: 0;
+      }
+      .contact_wrapper{
+          width: 100%;
+          margin-top: 800px;
+      }
+      .form_fild .w_50{
+          width: 100%;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      header img{
+          width: 100%;
+          height: 100%;
+      }
+      .body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .contact_wrapper{
+          width: auto;
+          flex-direction: column;
+          padding: 10px;
+          margin-top: 12px;
+      }
+      .contact_wrapper .contact_info {
+          width: auto;
+      margin-top: 0px;
+      margin-left: 0px;
+      }
+      .contact_wrapper .contact_msg{
+        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width:auto;
+      }
+      .contact_info{
+          width: auto;
+          padding: 5px;
+      }
+      .input_group .w_50{
+          width: auto;
+    }
+    }

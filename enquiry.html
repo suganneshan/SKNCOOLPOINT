@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+
+
+  <!-- modal -->
+    <section class="modaled">
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header border-bottom-0">
+                <h1 style="color: white; font-weight: 400;font-size: 40px;">Enquiry Form</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"><img src="logo/crossicon (1).png" alt=""></span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form  action="connect_enqiury.php"  method="POST">
+                  <div class="form_fild">
+                    <div class="input_group w_100">
+                      <input type="text" name="e_name" id="e_name" class="input" title="Please Enter The First Name"  maxlength="100" required autocomplete="OFF">
+                      <label for="" class="placeholder">Name  <span style="color: red; padding-left: 2px;">*</span></label>
+                    </div>
+                        
+                        <div class="input_group w_100">
+                          <input type="text" class="input" name="e_location" id="e_location"  title="Please Enter Your District" maxlength="30"  required autocomplete="OFF" >
+                          <label for="" class="placeholder">Address<span style="color: red; padding-left: 2px;">*</span></label>
+                        </div>
+                    
+                    <div class="input_group w_100">
+                      <input type="email" name="e_email" id="e_email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please Enter The Valid Email Address" class="input" required autocomplete="OFF">
+                      <label for="" class="placeholder">Email  <span style="color: red;  padding-left: 2px;">*</span></label>
+                    </div>
+      
+                    <div class="input_group w_100">
+                      <input type="tel" name="e_phone" id="e_phone" class="input"  pattern="[0-9]{10}" title="Enter only 10 numbers" maxlength="10" required autocomplete="OFF">
+                      <label for="" class="placeholder">Phone Number  <span style="color: red;  padding-left: 2px;">*</span></label>
+                    </div>
+      
+                    <div class="input_group w_100">
+                      <textarea rows="9" cols="40"  name="e_message" id="e_message" class="input input_textarea" title="Please Enter Your Message"  required autocomplete="OFF"></textarea>
+                      <label class="placeholder textarea">post your queiries  <span style="color: red;  padding-left: 2px;">*</span></label>
+                    </div>
+                      <div class="input_group">
+                        <input type="submit" name="submit_enq" id="submit_enq" class="btn" value="Send">
+                       </div>
+                       
+                    </div>
+                  
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    
+          </section>
+          <!-- modal -->
+    
+       
+</body>
+</html>
